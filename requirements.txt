@@ -1,31 +1,25 @@
-# ── Web framework ──────────────────────────────────────────────────────────────
+# ── Web Framework ──────────────────────────────────────────────────────────────
 flask>=3.0.0
 flask-cors>=4.0.0
 werkzeug>=3.0.0
 
-# ── Numerical / CV ─────────────────────────────────────────────────────────────
-numpy>=1.24.0,<2.0.0
+# ── Numerical / Computer Vision ────────────────────────────────────────────────
+numpy>=1.24.0
 opencv-python-headless>=4.8.0
-Pillow>=10.2.0,<10.3.0          # facenet-pytorch needs <10.3
+Pillow>=10.0.0
 
-# ── Deep learning ──────────────────────────────────────────────────────────────
-torch>=2.0.0
-torchvision>=0.15.0
-facenet-pytorch>=2.5.3
-
-# ── Face analysis ──────────────────────────────────────────────────────────────
-insightface>=0.7.3
-onnxruntime>=1.16.0             # swap for onnxruntime-gpu if you have CUDA
-
-# ── Detection / tracking ───────────────────────────────────────────────────────
+# ── Object Detection & Tracking (YOLOv8) ──────────────────────────────────────
 ultralytics>=8.2.0
-lapx>=0.5.5                     # replaces lap, builds without pkg_resources errors
-filterpy>=1.4.5
 
-# ── ML utilities ───────────────────────────────────────────────────────────────
-scikit-learn>=1.3.0
-scipy>=1.11.0
+# ── Face Recognition (InsightFace / ArcFace) ──────────────────────────────────
+insightface>=0.7.3
+onnxruntime>=1.16.0              # swap for onnxruntime-gpu for CUDA support
+
+# ── Face Recognition Fallback ──────────────────────────────────────────────────
 deepface>=0.0.90
 
-# ── Optional: better liveness (uncomment if needed) ───────────────────────────
-# mediapipe>=0.10.0
+# ── Scientific Computing ───────────────────────────────────────────────────────
+scipy>=1.11.0
+
+# ── Optional: Better Liveness Detection (MediaPipe) ───────────────────────────
+mediapipe>=0.10.0
